@@ -1,9 +1,10 @@
 def suma(a,b):
     
-    return a+b
+    return a+b #simple funcion de sumar 
 
-print(suma(4 , 3))
+print(suma(4 , 3)) #imprimir en consola
 
+#----------------
 
 
 valor1 = 5 #variable global
@@ -11,6 +12,8 @@ valor1 = 5 #variable global
 def suma2():
     b = 5 #Variable local
     print(valor1 + b)
+
+#----------------
 
 suma2()
 
@@ -21,17 +24,23 @@ def Persona(nombre):
 
 Persona('Julia')#usar la funcion
 
+#----------------
 
-def Amigo(nombre):
+def Amigo(nombre): #funcion a usar en otra funcion
     return nombre
 
 def MencionarAmigo(nombre):
     print(f"Hola, mi amigo es {nombre} :)")
 
-MencionarAmigo(Amigo("David"))
+MencionarAmigo(Amigo("David")) #se usa la funcion Amigo
+                   #dentro de la funcion MencionarAmigo
+#----------------
 
-MiAmigo = Amigo("David")
+MiAmigo = Amigo("David") # variable que obtendra el valor
+                #de la funcion Amigo
 
-MencionarAmigo(MiAmigo)
+MencionarAmigo(MiAmigo) #uso de la variable
 
+
+#----------------
 
