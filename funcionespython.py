@@ -18,16 +18,18 @@ def suma2():
 suma2()
 
 def Persona(nombre):
-    edad = 25
+    edad = 25 #en python no es necesario indicar
+              #que tipo de dato es (Int)
 
-    print(f'Hola {nombre} tienes {edad} años')
+    print(f'Hola {nombre} tienes {edad} años')#uso de variables
+                                              #en print
 
 Persona('Julia')#usar la funcion
 
 #----------------
 
-def Amigo(nombre): #funcion a usar en otra funcion
-    return nombre
+def Amigo(nombre): #funcion que retornará el nombre
+    return nombre  #del amigo 
 
 def MencionarAmigo(nombre):
     print(f"Hola, mi amigo es {nombre} :)")
@@ -43,4 +45,14 @@ MencionarAmigo(MiAmigo) #uso de la variable
 
 
 #----------------
+
+def Edad(edad):
+    if edad < 0:
+        print("Edad no válida")
+    elif (edad<15):
+        print("eres un niño")
+    else :
+        print("no eres un niño")
+
+Edad(25)
 
