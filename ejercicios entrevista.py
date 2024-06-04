@@ -38,26 +38,33 @@ print(max3(1,9,4))
 
 print("----")
 
-#definir una funcion que calcule la longitud de una lista
+#definir una funcion que calcule la longitud de una lista y de los string
 #sin usar len()
 
-array = ['a', 1 , 'XD','4']
-def LongitudLista(lista):
-    i = 0
+def LongitudLista(lista,nombre):
     x = 0
-    while x<10:
+    while x<100:
         try:
-            lista[x]
-            print(f"{lista[x]}")
-            x+=1
-            #prueba de imprimir la lista
-        except:
-            print("prueba")
-            print(x)
-            break
+            lista[x] #esto dará error cuando la posicion x sea mayor a la
+                    #longitud de la lista por eso usamos el except (es el catch)
+            #print(f"{lista[x]}")
+            # - prueba de imprimir la lista
 
-    print(lista[2])
-LongitudLista(array)
+            x+=1
+        except:
+            #print("except prueba")
+            # - prueba para ver si se retorna el break e imprime la longitud
+            # - de la lista
+            #print(x)
+            break
+    return (f"la longitud de {nombre} es: {x}")
+
+array = ['a', 1 , 'XD','4']
+print(LongitudLista(array,"lista"))
+
+caracteres = "asdds} {%"
+print(LongitudLista(caracteres,"String"))
+
 
 #crear una funcion que tome un valor, y devuelva si true si es una vocal,
 # y false si no
