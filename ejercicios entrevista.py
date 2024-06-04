@@ -161,4 +161,42 @@ def multiplicar(lista):
 array2 = [1,2,3,4,7]
 print("valor esperado 168 :",multiplicar(array2))
 
-print("--- restar --")
+print("--- multiplicar --")
+
+
+# Definir una funcion que invierta una cadena de caracteres
+
+def invertirString(cadena):
+    x = 0
+    stringVolteado = ""
+    i = 10 #valor base, se incrementa por si la lista o string es mas alto
+    while x<i:
+        try:
+            print(cadena[x])
+            str(cadena[x])
+            x+=1
+            i+=1
+        except ValueError:
+            return "Error, no ingresar valores numericos"
+            #maneja error al encontrar un caracter numerico 
+        except:
+            break
+            #
+    while x>-0: #esta vez 0 para el limite de posicion de caracteres del string
+        try:    #(numeros negativos van al final de la lista y te lo devuelve)
+
+            x-=1#-1 desde inicio para evitar errores de posicion
+
+            str(cadena[x])   
+
+            stringVolteado += cadena[x]
+        except:
+            print('break')
+
+            break
+            #
+    return stringVolteado
+
+cadena2 = "hola mundo"
+print(invertirString(cadena2))
+print("---")
