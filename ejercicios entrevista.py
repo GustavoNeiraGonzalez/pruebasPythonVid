@@ -68,6 +68,48 @@ print(LongitudLista(array,"lista"))
 caracteres = "asdds} %"
 print(LongitudLista(caracteres,"String"))
 
+print("--- letras ----")
 
-#crear una funcion que tome un valor, y devuelva si true si es una vocal,
+#crear una funcion que tome un valor, y devuelva si true si es una letra,
 # y false si no
+
+def LetraFalseTrue(a):
+    a=str(a)
+    if not len(a) == 1:
+        return "no ingresar mas de 1 caracter"
+
+    if 'a' <= a <= 'z' or 'A' <= a <= 'Z':
+        return True
+    else:
+        return False
+        
+vocal = 23
+print (f"se espera error longitud:  {LetraFalseTrue(vocal)}")
+
+
+vocal = "2"
+print (f"se espera valor False:  {LetraFalseTrue(vocal)}")
+vocal = "t"
+print (f"se espera valor True:  {LetraFalseTrue(vocal)}")
+print("--- vocales ---")
+
+#la misma funcion pero con vocales
+
+def VocalFalseTrue(a):
+    a=str(a)
+    if not len(a) == 1:
+        return "no ingresar mas de 1 caracter"
+
+    if a in 'aeiou':
+        return True
+    else:
+        return False
+        
+vocal = 23
+print (f"se espera error longitud:  {VocalFalseTrue(vocal)}")
+
+
+vocal = "b"
+print (f"se espera valor False:  {VocalFalseTrue(vocal)}")
+vocal = "a"
+print (f"se espera valor True:  {VocalFalseTrue(vocal)}")
