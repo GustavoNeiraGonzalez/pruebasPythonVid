@@ -43,7 +43,8 @@ print("----")
 
 def LongitudLista(lista,nombre):
     x = 0
-    while x<100:
+    i = 10 #valor base, se incrementa por si la lista o string es mas alto
+    while x<i:
         try:
             lista[x] #esto dará error cuando la posicion x sea mayor a la
                     #longitud de la lista por eso usamos el except (es el catch)
@@ -51,18 +52,20 @@ def LongitudLista(lista,nombre):
             # - prueba de imprimir la lista
 
             x+=1
+            i+=1
         except:
             #print("except prueba")
             # - prueba para ver si se retorna el break e imprime la longitud
             # - de la lista
             #print(x)
             break
+
     return (f"la longitud de {nombre} es: {x}")
 
 array = ['a', 1 , 'XD','4']
 print(LongitudLista(array,"lista"))
 
-caracteres = "asdds} {%"
+caracteres = "asdds} %"
 print(LongitudLista(caracteres,"String"))
 
 
