@@ -113,3 +113,52 @@ vocal = "b"
 print (f"se espera valor False:  {VocalFalseTrue(vocal)}")
 vocal = "a"
 print (f"se espera valor True:  {VocalFalseTrue(vocal)}")
+
+
+#crear una funcion sumar() y multip() que sumen y multipliquen los
+#elementos de una lista
+
+def sumar(lista):
+    x = 0
+    total = 0
+    i = 10 #valor base, se incrementa por si la lista o string es mas alto
+    while x<i:
+        try:
+            int(lista[x])
+            total += lista[x]
+            x+=1
+            i+=1
+        except ValueError:
+            return "Error, no ingresar caracteres string"
+            #maneja error al encontrar un caracter no numerico al convertir a int
+        except:
+            break
+    return total
+
+array = [7, 1 , 2,4]
+print("valor esperado 14: ",sumar(array))
+
+print("--- sumar ---")
+
+def multiplicar(lista):
+    x = 0
+    total = 1
+    i = 10 #valor base, se incrementa por si la lista o string es mas alto
+    while x<i:
+        try:
+            int(lista[x])
+            total *= lista[x]
+            x+=1
+            i+=1
+        except ValueError:
+            return "Error, no ingresar caracteres string"
+            #maneja error al encontrar un caracter no numerico al convertir a int
+        except:
+            break
+    return total
+
+
+array2 = [1,2,3,4,7]
+print("valor esperado 168 :",multiplicar(array2))
+
+print("--- restar --")
