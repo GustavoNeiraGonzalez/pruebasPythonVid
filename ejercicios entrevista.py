@@ -206,18 +206,22 @@ print("---")
 
 def EsPalindromo(palabra):
     palindromo = ""
-    for i in len(palabra):
-        palindromo += palabra[i]
+    bucle = len(palabra)
+    reverso = bucle-1 # -1 por el valor inicial de palabra que parte en 0
+    for i in range (bucle):
+        palindromo += palabra[reverso]
+        reverso += -1
         
+    print(palindromo)
     if palindromo == palabra:
         return (f"{palindromo} es palindromo")
     else:
         return (f"{palindromo} NO es palindromo")
 
 palabra = "radar"
-print(EsPalindromo())
+print(EsPalindromo(palabra))
 palabra = "hola"
-print(EsPalindromo())
+print(EsPalindromo(palabra))
     
 # definir una funcion superPosicion() que tome 2 listas y si algun elemento
 # entre las listas es igual, devolver true, si no, false. usar bucle for anidado
