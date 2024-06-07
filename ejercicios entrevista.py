@@ -204,7 +204,21 @@ print("---")
 # definir una funcion que reconozca una funcion EsPalindromo()
 # (palindromo son palabras que se escriben igual al reves y normal ej: radar)
 
+def EsPalindromo(palabra):
+    palindromo = ""
+    for i in len(palabra):
+        palindromo += palabra[i]
+        
+    if palindromo == palabra:
+        return (f"{palindromo} es palindromo")
+    else:
+        return (f"{palindromo} NO es palindromo")
 
+palabra = "radar"
+print(EsPalindromo())
+palabra = "hola"
+print(EsPalindromo())
+    
 # definir una funcion superPosicion() que tome 2 listas y si algun elemento
 # entre las listas es igual, devolver true, si no, false. usar bucle for anidado
 
