@@ -244,12 +244,32 @@ print('-------')
 #entonces devolver ese caracter por el numero de veces (5,x = xxxxx)
 
 def GenerarNCaracteres(x,caracter):
-    mult = caracter * x
+    try:
+        int(x)
+        str(caracter)#try except para verificar que los datos sean validos
+    except:
+        return ("error, ingresar un numero y un caracter, en ese orden")
+    mult = caracter * x #simplemente multiplicar el string por el numero
     print(mult)
-GenerarNCaracteres(8,'p')
+    
+print(GenerarNCaracteres(4,'p'))
 #definir un histograma procedicimiento() que tome una lista de numeros e
-#imprima el histograma, ej: (4,2,6)
+#imprima el histograma,
+#ej: (4,2,6)
 # ....
 # ..
 # ......
+
+def procedimiento(*numeros): #con *numeros convertiras los valores en un array
+                             # por lo que no estas limitado a una cantidad fija
+    for i in range (len(numeros)):
+        try:
+            int(numeros[i])
+        except:
+            return print(f"error en item posicion {i+1}, ingresar",
+                         "unicamente numeros")
+        print(f"{'.'*numeros[i]}") #multiplicar el string . por la cantidad
+        
+procedimiento(1,2,3,'p')
+
 
