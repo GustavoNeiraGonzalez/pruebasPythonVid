@@ -239,3 +239,14 @@ listaA = ['a','b',1,2,3]
 listaB = ['s','g',4,5,3]
 print(superPosicion(listaA,listaB))
     
+#definir una funcion GenerarNCaracteres() que tome un numero y un caracter,
+#entonces devolver ese caracter por el numero de veces (5,x = xxxxx)
+
+
+
+#definir un histograma procedicimiento() que tome una lista de numeros e
+#imprima el histograma, ej: (4,2,6)
+# ....
+# ..
+# ......
+
