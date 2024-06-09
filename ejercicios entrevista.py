@@ -212,7 +212,6 @@ def EsPalindromo(palabra):
         palindromo += palabra[reverso]
         reverso += -1
         
-    print(palindromo)
     if palindromo == palabra:
         return (f"{palindromo} es palindromo")
     else:
@@ -226,3 +225,17 @@ print(EsPalindromo(palabra))
 # definir una funcion superPosicion() que tome 2 listas y si algun elemento
 # entre las listas es igual, devolver true, si no, false. usar bucle for anidado
 
+def superPosicion(x,y):
+    bucleX = len(x)
+    bucleY = len(y)
+    for i in range(bucleX): #2 for para recorrer las listas, y comparar todos
+                            #los items con todos los items de las listas
+        for b in range(bucleY):
+            if (x[i] == y[b]):
+                return True
+    return False #si no encuentra ninguna similitud, dara false
+
+listaA = ['a','b',1,2,3]
+listaB = ['s','g',4,5,3]
+print(superPosicion(listaA,listaB))
+    
