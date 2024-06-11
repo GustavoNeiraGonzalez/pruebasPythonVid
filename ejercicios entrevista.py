@@ -281,7 +281,11 @@ print('-------')
 #múltiplos de cinco, añade "Buzz".
 # Para números que son múltiplos de ambos tres y cinco, añade "FizzBuzz".
 
-mult = 1.2
+mult = 6
 print (f'multiplo {int(mult)}')
-if mult >= int(mult):
-    print('numero  decimal')
+if mult % 3 == 0:
+    print("es divisible de 3")
+    print(mult%3)
+else:
+    print(mult%3)
+    
