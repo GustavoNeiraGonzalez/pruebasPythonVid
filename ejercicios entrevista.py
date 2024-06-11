@@ -281,4 +281,7 @@ print('-------')
 #múltiplos de cinco, añade "Buzz".
 # Para números que son múltiplos de ambos tres y cinco, añade "FizzBuzz".
 
-
+mult = 1.2
+print (f'multiplo {int(mult)}')
+if mult >= int(mult):
+    print('numero  decimal')
