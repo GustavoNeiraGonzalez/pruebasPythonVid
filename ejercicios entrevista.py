@@ -172,7 +172,6 @@ def invertirString(cadena):
     i = 10 #valor base, se incrementa por si la lista o string es mas alto
     while x<i:
         try:
-            print(cadena[x])
             str(cadena[x])
             x+=1
             i+=1
@@ -253,6 +252,8 @@ def GenerarNCaracteres(x,caracter):
     print(mult)
     
 print(GenerarNCaracteres(4,'p'))
+print('-------')
+
 #definir un histograma procedicimiento() que tome una lista de numeros e
 #imprima el histograma,
 #ej: (4,2,6)
@@ -271,5 +272,6 @@ def procedimiento(*numeros): #con *numeros convertiras los valores en un array
         print(f"{'.'*numeros[i]}") #multiplicar el string . por la cantidad
         
 procedimiento(1,2,3,'p')
+print('-------')
 
 
