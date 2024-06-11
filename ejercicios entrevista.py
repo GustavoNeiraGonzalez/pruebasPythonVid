@@ -275,3 +275,10 @@ procedimiento(1,2,3,'p')
 print('-------')
 
 
+# Escribe una función fizz_buzz que tome un número n y devuelva una
+#lista de números del 1 a n.
+# Para múltiplos de tres, añade "Fizz" en lugar del número y para los
+#múltiplos de cinco, añade "Buzz".
+# Para números que son múltiplos de ambos tres y cinco, añade "FizzBuzz".
+
+
