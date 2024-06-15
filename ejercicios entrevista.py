@@ -292,5 +292,13 @@ def fizz_buzz(n):
             print(i+1)
             
 fizz_buzz(15)
+print ("------")
+# Escribe una función comprimir_cadena que tome una cadena y devuelva una
+# versión comprimida de la cadena.
+# La cadena comprimida debe usar el formato de contar las letras consecutivas,
+# por ejemplo, "aaabbbccc" se convierte en "a3b3c3".
+# Si la cadena comprimida no es más corta que la cadena original,
+# devuelve la cadena original.
+
 
 
