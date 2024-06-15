@@ -300,5 +300,18 @@ print ("------")
 # Si la cadena comprimida no es más corta que la cadena original,
 # devuelve la cadena original.
 
+def comprimirCadena(cadena):
+    comprimido = ""
+    charConsecutivo = ""
+    CharCount = 0
+    for i in range (len(cadena)):
+        
+        if cadena[i] == charConsecutivo:
+            charCount +=1
+            
 
+
+        
+        
+    
 
