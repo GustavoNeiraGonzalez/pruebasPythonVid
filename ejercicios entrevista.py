@@ -282,10 +282,15 @@ print('-------')
 # Para números que son múltiplos de ambos tres y cinco, añade "FizzBuzz".
 
 mult = 6
-print (f'multiplo {int(mult)}')
-if mult % 3 == 0:
-    print("es divisible de 3")
-    print(mult%3)
-else:
-    print(mult%3)
-    
+def fizz_buzz(n):
+    for i in range (n): # n es el rango a imprimir
+        if (i+1) % 3 == 0:  # verifica si es divisible entre 3
+            print("fizz")
+        elif (i+1) % 5 == 0: # i+1 por el ciclo empieza en 0
+            print("buzz")
+        else:
+            print(i+1)
+            
+fizz_buzz(15)
+
+
