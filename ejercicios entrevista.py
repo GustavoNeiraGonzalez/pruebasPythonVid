@@ -308,7 +308,10 @@ def comprimirCadena(cadena):
         
         if cadena[i] == charConsecutivo:
             charCount +=1
-            
+            charConsecutivo == cadena[i]
+        else:
+            comprimido += cadena[i]
+        
 
 
         
