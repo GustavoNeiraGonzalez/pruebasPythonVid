@@ -305,22 +305,26 @@ def comprimirCadena(cadena):
     charConsecutivo = ""
     charCount = 0
     for i in range (len(cadena)):
-        charConsecutivo = cadena[i]
-        print(f"{cadena[i]} + {charConsecutivo}")
+        
+        #print(f"{cadena[i]} + {charConsecutivo}")
 
         if cadena[i] == charConsecutivo: #aqui para ver letras consecutivas
             print(charCount)
             charCount +=1
-            charConsecutivo = cadena[i]
         elif charCount != 0:#aqui si charcount no es 0 es decir hubo caract
                             # consecutivos. pero no cumple el primer if
                                 # asi que se devuelve lo comprimido
-            print(charCount)
+            print(charCount) 
             comprimido += charConsecutivo + str(charCount)
             charCount == 0
+            charConsecutivo == cadena[i]
+
         else:
+            #aqui necesito hacer otro if para verificar que la siguiente vuelta
+            #del for no me salte la primera verificacion de caracter consecutivo
             comprimido += cadena[i] # devolver caracter normal
             charCount == 0
+            
 
     print(comprimido)
 comprimirCadena("aabbccddd")
