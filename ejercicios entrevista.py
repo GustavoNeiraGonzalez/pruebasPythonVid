@@ -306,15 +306,15 @@ def comprimirCadena(cadena):
     CharCount = 0
     for i in range (len(cadena)):
         
-        if cadena[i] == charConsecutivo:
+        if cadena[i] == charConsecutivo: #aqui para ver letras consecutivas
             charCount +=1
             charConsecutivo == cadena[i]
-        elif charCount is not 0:
-            charCount == 0
-            
+        elif charCount is not 0:#aqui si charcount no es 0 es decir hubo caract
+            charCount == 0      # consecutivos. pero no cumple el primer if
+                                # asi que se devuelve lo comprimido
             comprimido += charConsecutivo + str(charCount)
         else:
-            comprimido += cadena[i]
+            comprimido += cadena[i] # devolver caracter normal
             charCount == 0
             
         
