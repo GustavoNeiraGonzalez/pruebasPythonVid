@@ -310,7 +310,10 @@ def comprimirCadena(cadena):
 
         #idea resolver de alguna forma el que no tome los otros ifs
         #haciendo una verificacion con el numero de ciclo
-        
+        print('consecutivo')
+        print(charConsecutivo)
+        print('cadena')
+        print(cadena[i])
         if cadena[i] == charConsecutivo: #aqui para ver letras consecutivas
             print(charCount)
             charCount +=1
@@ -323,10 +326,12 @@ def comprimirCadena(cadena):
             charConsecutivo == cadena[i]
 
         else:
+            
             #aqui necesito hacer otro if para verificar que la siguiente vuelta
             #del for no me salte la primera verificacion de caracter consecutivo
             comprimido += cadena[i] # devolver caracter normal
             charCount == 0
+            charConsecutivo == cadena[i]
             
 
     print(comprimido)
