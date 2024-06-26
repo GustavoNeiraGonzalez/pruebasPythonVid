@@ -303,47 +303,40 @@ print ("------")
 def comprimirCadena(cadena):
     comprimido = ""
     charConsecutivo = ""
-    charCount = 0
+    charCount = 1
     for i in range (len(cadena)):
         #print(f"{cadena[i]} + {charConsecutivo}")
 
         #idea resolver de alguna forma el que no tome los otros ifs
         #haciendo una verificacion con el numero de ciclo
-
+        if i == 0 and cadena[0] == cadena[1] :
+             charConsecutivo = cadena[i]
+             
         if cadena[i] == charConsecutivo: #aqui para ver letras consecutivas
             charCount +=1
-            #-------------
-        elif i == 0:    # este elif verifica SOLO el primer ciclo si hay
-                        # caracteres consecutivos, entonces devolver el valor
-                        # correcto si es asi, y si no, tambien contemplarlo
-            if cadena[i]==cadena[i+1]:#i+1 para saber el valor siguiente
-                charConsecutivo = cadena[i]
-                charCount +=1
-            else:
-                comprimido += cadena[i] # devolver caracter normal
-                charCount = 0
-                charConsecutivo = cadena[i]
-
-            #--------------
-        elif charCount != 0:#aqui si charcount no es 0 es decir hubo caract
+            
+        elif charCount != 1:#aqui si charcount no es 0 es decir hubo caract
                             # consecutivos. pero no cumple el primer if
                                 # asi que se devuelve lo comprimido
+            print(comprimido)
             comprimido += charConsecutivo + str(charCount)
-            charCount = 0
+            charCount = 1
+            
             charConsecutivo = cadena[i]
-
+            print(charConsecutivo)
         else:
 
             #aqui necesito hacer otro if para verificar que la siguiente vuelta
             #del for no me salte la primera verificacion de caracter consecutivo
             comprimido += cadena[i] # devolver caracter normal
-            charCount = 0
+            charCount = 1
             charConsecutivo = cadena[i]
 
 
     print(comprimido)
-comprimirCadena("aaabbccddd")
-#por algun motivo no s e
+comprimirCadena("abccddd")
+#por algun motivo si el primer caracter no es consecutivo, entonces al siguiente
+#caracter consecutivo, dara doble caracter al retornar ej: "abcc" = abcc2
 
         
         
