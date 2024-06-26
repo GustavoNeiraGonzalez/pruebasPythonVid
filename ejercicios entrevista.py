@@ -306,30 +306,34 @@ def comprimirCadena(cadena):
     charCount = 1
     for i in range (len(cadena)):
         #print(f"{cadena[i]} + {charConsecutivo}")
-
+        print(i)
         if i == 0 and cadena[0] == cadena[1] : #aqui verificamos el primer ciclo
              charConsecutivo = cadena[i]       #solo el primero si hay consecutivos
              
         elif cadena[i] == charConsecutivo: #aqui para ver letras consecutivas
+            print("prueba")
             charCount += 1
             
         elif charCount != 1:#aqui si charcount no es 0 es decir hubo caract
                             # consecutivos. pero no cumple el primer if
                                 # asi que se devuelve lo comprimido
+                    
+            print(f"2 elif {cadena[i]} + {charCount}")
+
             charConsecutivo = cadena[i]
       
             comprimido += charConsecutivo + str(charCount)
             charCount = 1
             
         else:
-            print(f"{cadena[i]} + {charCount}")
+            print(f"else {cadena[i]} + {charCount}")
             charConsecutivo = cadena[i]
             comprimido += cadena[i] # devolver caracter normal
             charCount = 1
             
 
     print(comprimido)
-comprimirCadena("abbbccdddeeff")
+comprimirCadena("abbbbbbccdddeeff")
 #por algun motivo si el primer caracter no es consecutivo, entonces al siguiente
 #caracter consecutivo, dara doble caracter al retornar ej: "abcc" = abcc2
 
