@@ -305,23 +305,35 @@ def comprimirCadena(cadena):
         return ""
     
     comprimido = ""
-    charConsecutivo = cadena[0]
+    charConsecutivo = cadena[0]#le damos valor base del primer caracter
     charCount = 1
     
     for i in range(1, len(cadena)):
+        print(i)
         if cadena[i] == charConsecutivo:
             charCount += 1
         else:
-            comprimido += charConsecutivo + (str(charCount) if charCount > 1 else "")
+            comprimido += charConsecutivo + (
+                str(charCount) if charCount > 1 else "")
+            #aqui a charConsecutivo (inicia con el string del primer caracter)
+            #se le agrega el numero de charcount si este es mayor a 1,
+            # si no, no
             charConsecutivo = cadena[i]
             charCount = 1
-    
-    # Añadir el último conjunto de caracteres
-    comprimido += charConsecutivo + (str(charCount) if charCount > 1 else "")
-    
+        
+    # ----- aqui fuera del bucle porque si el la longitud de cadena es 20,
+    #       llegaria hasta 19 y se necesita volver a retornar los valores de
+    #       las ultimas 2 lineas del bucle for o el if si se cumpliese 
+    print(i)
+    comprimido += charConsecutivo + (
+        str(charCount) if charCount > 1 else "")
+            #aqui a charConsecutivo (inicia con el string del primer caracter)
+            #se le agrega el numero de charcount si este es mayor a 1,
+            # si no, no
     return comprimido
 
-print (comprimirCadena("aaabbbbbbccdddeeff"))
+print (comprimirCadena("aaabbbbbbccdddeefffff"))
+print(comprimirCadena('avwwdrrs'))
 #por algun motivo si el primer caracter no es consecutivo, entonces al siguiente
 #caracter consecutivo, dara doble caracter al retornar ej: "abcc" = abcc2
 
