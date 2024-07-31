@@ -337,7 +337,57 @@ print(comprimirCadena('avwwdrrs'))
 #por algun motivo si el primer caracter no es consecutivo, entonces al siguiente
 #caracter consecutivo, dara doble caracter al retornar ej: "abcc" = abcc2
 
+#----------------------------------
+
         
-        
+# Dado un string 'beginWord', un string 'endWord', y una lista de strings 'wordList',
+# encuentra la longitud de la secuencia de transformación más corta de 'beginWord' a 'endWord',
+# tal que:
+# 1. Solo una letra puede ser cambiada a la vez.
+# 2. Cada transformación intermedia debe ser una palabra válida en 'wordList'.
+
+# Ejemplo:
+# Entrada:
+# beginWord = "hit"
+# endWord = "cog"
+# wordList = ["hot", "dot", "dog", "lot", "log", "cog"]
+# Salida esperada: 5
+# Explicación: La secuencia de transformación más corta es "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+# que tiene una longitud de 5.
+
+# Nota:
+# - Si no existe tal secuencia, retorna 0.
+# - Todas las palabras tienen la misma longitud.
+# - Todas las palabras consisten solo de letras minúsculas.
+
+# Instrucciones:
+# 1. Verifica si 'endWord' está en 'wordList'. Si no está, retorna 0 inmediatamente, ya que no es posible llegar a 'endWord'.
+# 2. Usa un conjunto para mantener las palabras de 'wordList' para una búsqueda rápida.
+# 3. Utiliza un algoritmo de búsqueda en anchura (BFS) para encontrar la secuencia de transformación más corta.
+# 4. Inicializa una cola (deque) para manejar los posibles caminos de transformación. La cola debe contener tuplas de la forma (current_word, level),
+#    donde 'current_word' es la palabra actual en la transformación y 'level' es la longitud del camino desde 'beginWord' hasta 'current_word'.
+# 5. Usa un conjunto para llevar un registro de las palabras visitadas y evitar ciclos.
+# 6. Mientras la cola no esté vacía, haz lo siguiente:
+#    a. Extrae el primer elemento de la cola.
+#    b. Genera todas las posibles palabras de una letra diferente de la palabra actual.
+#    c. Para cada palabra generada, si es igual a 'endWord', retorna el nivel actual + 1.
+#    d. Si la palabra generada está en 'wordList' y no ha sido visitada, añádela a la cola con el nivel incrementado en 1 y márcala como visitada.
+# 7. Si la cola se vacía y no se ha encontrado 'endWord', retorna 0.
+
+# Aquí tienes un esquema básico para que puedas implementarlo:
+# from collections import deque
+
+# Verifica si 'endWord' está en 'wordList'
+# Crea un conjunto para la búsqueda rápida de palabras en 'wordList'
+# Inicializa la cola (deque) con la tupla (beginWord, 1)
+# Crea un conjunto para las palabras visitadas
+
+# Mientras la cola no esté vacía
+    # Extrae el primer elemento de la cola
+    # Para cada posición de la palabra actual, genera todas las posibles palabras de una letra diferente
+    # Si una palabra generada es igual a 'endWord', retorna el nivel actual + 1
+    # Si la palabra generada está en 'wordList' y no ha sido visitada, añádela a la cola y márcala como visitada
+
+# Si la cola se vacía y no se ha encontrado 'endWord', retorna 0
     
 
