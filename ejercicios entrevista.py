@@ -351,8 +351,7 @@ print(comprimirCadena('avwwdrrs'))
 # beginWord = "hit"
 # endWord = "cog"
 # wordList = ["hot", "dot", "dog", "lot", "log", "cog"]
-# Salida esperada: 5
-# Explicación: La secuencia de transformación más corta es "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+t# Explicación: La secuencia de transformación más corta es "hit" -> "hot" -> "dot" -> "dog" -> "cog",
 # que tiene una longitud de 5.
 
 # Nota:
@@ -390,4 +389,8 @@ print(comprimirCadena('avwwdrrs'))
 
 # Si la cola se vacía y no se ha encontrado 'endWord', retorna 0
     
+#(por lo que entendi el resultado esperado es que hit se termina transformando
+# en cada palabra de la wordlist para acabar en cog. hit-hot-dot-dog-cog)
+# 
 
+#sin embargo a este punto no puedo desarrollar una respuesta 
