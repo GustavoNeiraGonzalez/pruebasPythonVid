@@ -394,3 +394,9 @@ t# Explicación: La secuencia de transformación más corta es "hit" -> "hot" ->
 # 
 
 #sin embargo a este punto no puedo desarrollar una respuesta 
+
+
+def wordOrder():
+    word = "hit"
+    EndWor = "cog"
+    wordList = ["hit","hot","dot","dog","cog"]
