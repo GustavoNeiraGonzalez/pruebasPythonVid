@@ -400,3 +400,6 @@ def wordOrder():
     word = "hit"
     EndWor = "cog"
     wordList = ["hit","hot","dot","dog","cog"]
+
+    for i in range (len(wordList)):
+        
