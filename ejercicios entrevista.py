@@ -402,4 +402,6 @@ def wordOrder():
     wordList = ["hit","hot","dot","dog","cog"]
 
     for i in range (len(wordList)):
+
+        if i == #aqui buscar igualdad entre las palabras y letras del listado
         
