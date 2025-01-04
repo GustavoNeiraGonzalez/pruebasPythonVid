@@ -351,7 +351,7 @@ print(comprimirCadena('avwwdrrs'))
 # beginWord = "hit"
 # endWord = "cog"
 # wordList = ["hot", "dot", "dog", "lot", "log", "cog"]
-t# Explicación: La secuencia de transformación más corta es "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+# Explicación: La secuencia de transformación más corta es "hit" -> "hot" -> "dot" -> "dog" -> "cog",
 # que tiene una longitud de 5.
 
 # Nota:
@@ -405,3 +405,4 @@ def wordOrder():
 
         if i == #aqui buscar igualdad entre las palabras y letras del listado
         
+asd
