@@ -405,4 +405,8 @@ def wordOrder():
 
         if i == #aqui buscar igualdad entre las palabras y letras del listado
         
-asd
+#sera que tendre que en un loop buscar el numero de diferencias, en el mismo loop guardar la 
+# diferencia y luego comparar segun la palabra siguiente y la actual con la palabra original
+# es decir la actual con el numero total y la siguiente? para saber cual de las diferencias será
+# el camino mas facil para llegar al camino mas rapido para cambiar una letra dependiendo de esas
+# igualdades, quizas es esto o esto es un paso extra a la verdadera resolución
